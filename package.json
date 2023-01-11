@@ -1,5 +1,27 @@
 {
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "name": "project-maisoft",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OuelsoH/node-project-maisoft.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OuelsoH/node-project-maisoft/issues"
+  },
+  "homepage": "https://github.com/OuelsoH/node-project-maisoft#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
