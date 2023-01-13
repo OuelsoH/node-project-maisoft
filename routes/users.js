@@ -4,20 +4,20 @@ import { v4 as uuidv4 } from 'uuid';
 
 const router = express.Router();
 
-let users = [ 
+let users = [ ];
 
-    {
-        firstName: "armel",
-        lastName: "cedric",
-        age: 25
-    },
+//     {
+//         firstName: "armel",
+//         lastName: "cedric",
+//         age: 25
+//     },
 
-    {
-        firstName: "Ben",
-        lastName: "dino",
-        age: 28
-    }
-]
+//     {
+//         firstName: "Ben",
+//         lastName: "dino",
+//         age: 28
+//     }
+   
 
 router.get('/', (req, res) => {
     res.send(users);
@@ -69,6 +69,35 @@ router.delete('/:id', (req, res) => {
     res.send (`user ${id}  deleted`);
 
 
-}) 
+}) ;
+
+router.patch('/:id', (req, res) => {
+    const { id } = req.params;
+    const { firstName, lastName, age} = req.body;
+
+    const user = users.find((user) => user.id = id);
+
+    // if(firstName){
+    //     user.firstName = firstName;
+    // }
+    // if(lastName){
+    //     user.lastName = lastName;
+    // }
+    // if(age){
+    //     user.age = age;
+    // }
+
+
+     //clean code
+     if(firstName) user.firstName = firstName;
+     if(lastName) user.lastName = lastName;
+     if(age) user.age = age ;
+     
+     
+     res.send(`user ${id} updated`);
+    
+
+
+})
 
 export default router;
